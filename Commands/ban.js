@@ -1,10 +1,10 @@
 module.exports = {
-    name: "ban",
-    description: "Ban's a member",
-    cooldown: 0,
-    execute(message){
-    if (message.content.startsWith(';ban')) {
-			if (!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send("Error: Missing Permissions (`KICK_MEMBERS`)");
+  name: "ban",
+  description: "Ban's a member",
+  cooldown: 0,
+  execute(message) {
+    if (message.content.startsWith('Outcast ban')) {
+      if (!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send("Error: Missing Permissions (`KICK_MEMBERS`)");
       const user = message.mentions.users.first();
       if (user) {
         const member = message.guild.member(user);
